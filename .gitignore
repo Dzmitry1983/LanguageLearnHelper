@@ -22,6 +22,10 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+## MacOS scpecific
+*.DS_Store
+[Tt]humbs.db
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
