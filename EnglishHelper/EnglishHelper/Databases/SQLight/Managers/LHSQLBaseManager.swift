@@ -131,7 +131,7 @@ class LHSQLBaseManager {
 	}
 	
 	func detachDatabase(_ databaseName:String) {
-		if let index = self.databases.index(of:databaseName) {
+        if let index = self.databases.firstIndex(of: databaseName) {
 			let command = "DETACH DATABASE `\(databaseName)`;"
 			if sqlite3_exec(self.sqlDataBase, command, nil, nil, nil) != SQLITE_OK {
 				self.printError(self.sqlDataBase)

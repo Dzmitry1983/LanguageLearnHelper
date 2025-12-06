@@ -26,10 +26,10 @@ class LHSQLWordModel: BaseSQLModel, SQLModelProtocol {
 	var definitions = [LHSQLDefinitionModel]()
 	var translations = [LHSQLTranslationModel]()
 	
-	static var table:String = "Words"
+	static let table:String = "Words"
 	
-	static var sqlCreateTable:String = "`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` TEXT NOT NULL, `transcription` TEXT, `speech` INTEGER NOT NULL"
-	static var sqlFields:[String] = ["id", "word", "transcription", "speech"]	
+	static let sqlCreateTable:String = "`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` TEXT NOT NULL, `transcription` TEXT, `speech` INTEGER NOT NULL"
+	static let sqlFields:[String] = ["id", "word", "transcription", "speech"]
 	
 	subscript(index: String) -> Any {
 		let returnValue:Any

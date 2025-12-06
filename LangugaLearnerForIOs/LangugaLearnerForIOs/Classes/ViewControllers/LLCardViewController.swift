@@ -32,7 +32,7 @@ class LLCardViewController: UIViewController {
 	
 	private var pageNumber:Int = 0
 	private var wordModel:LLWordModelProtocol? = nil
-	private var modelsArray:LLWordsControllerProtocol = LLSQLWordsController()
+	private var modelsArray = LLSQLWordsControllerModel()
 	var isIncrementedDef:Bool = false
 	var isIncrementedEn:Bool = false
 	
@@ -117,7 +117,7 @@ class LLCardViewController: UIViewController {
 	private func swipeToLeft() {
 		self.addPageNumber()
 		
-		let animation = self.pageNumber == 0 ? UIViewAnimationOptions.transitionCurlUp : UIViewAnimationOptions.transitionFlipFromRight
+        let animation: UIView.AnimationOptions = self.pageNumber == 0 ? .transitionCurlUp : .transitionFlipFromRight
 		UIView.transition(with: self.flipView, duration:duration, options:animation, animations: {
 			self.updatePage()
 		}) { (isFinish) in
@@ -132,7 +132,7 @@ class LLCardViewController: UIViewController {
 	
 	private func swipeToRight() {
 		self.subPageNumber()
-		let animation = self.pageNumber == 1 ? UIViewAnimationOptions.transitionCurlDown : UIViewAnimationOptions.transitionFlipFromLeft
+        let animation: UIView.AnimationOptions = self.pageNumber == 1 ? .transitionCurlDown : .transitionFlipFromLeft
 		UIView.transition(with: self.flipView, duration:duration, options:animation, animations: {
 			self.updatePage()
 		}) { (isFinish) in
@@ -183,13 +183,13 @@ class LLCardViewController: UIViewController {
     */
 	@IBAction func swipeSelector(_ sender: UISwipeGestureRecognizer) {
 		switch sender.direction {
-		case UISwipeGestureRecognizerDirection.left:
+		case .left:
 			self.swipeToLeft()
-		case UISwipeGestureRecognizerDirection.right:
+		case .right:
 			self.swipeToRight()
-		case UISwipeGestureRecognizerDirection.down:
+		case .down:
 			print(sender.direction)
-		case UISwipeGestureRecognizerDirection.up:
+		case .up:
 			print(sender.direction)
 		default:
 			print("default")

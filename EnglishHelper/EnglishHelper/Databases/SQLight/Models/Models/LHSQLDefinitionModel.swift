@@ -13,10 +13,10 @@ class LHSQLDefinitionModel: BaseSQLModel, SQLModelProtocol {
 	var wordId:Int32 = 0
 	var definition = ""
 	
-	static var table:String = "Definitions"
+	static let table:String = "Definitions"
 	
-	static var sqlCreateTable:String = "`id` INTEGER PRIMARY KEY AUTOINCREMENT, `wordId` INTEGER NOT NULL, `definition` TEXT"
-	static var sqlFields:[String] = ["id","definition","wordId"]
+	static let sqlCreateTable:String = "`id` INTEGER PRIMARY KEY AUTOINCREMENT, `wordId` INTEGER NOT NULL, `definition` TEXT"
+	static let sqlFields:[String] = ["id","definition","wordId"]
 	
 	subscript(index: String) -> Any {
 		let returnValue:Any

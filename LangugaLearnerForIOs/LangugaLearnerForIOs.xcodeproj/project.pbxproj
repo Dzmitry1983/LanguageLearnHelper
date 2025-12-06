@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		74089A8A1E53D6A2000B24F6 /* LLSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A891E53D6A2000B24F6 /* LLSectionModel.swift */; };
 		74089A8C1E53D6B1000B24F6 /* LLSQLWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8B1E53D6B1000B24F6 /* LLSQLWordModel.swift */; };
-		74089A901E53DD19000B24F6 /* LLSQLWordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8F1E53DD19000B24F6 /* LLSQLWordsController.swift */; };
+		74089A901E53DD19000B24F6 /* LLSQLWordsControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */; };
 		7429596B1E4A7853008BBAD5 /* LLCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429596A1E4A7853008BBAD5 /* LLCardViewController.swift */; };
 		742B06881E5ABD5500C1802A /* LHSQLBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06761E5ABD5500C1802A /* LHSQLBaseManager.swift */; };
 		742B06891E5ABD5500C1802A /* LHSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06771E5ABD5500C1802A /* LHSQLManager.swift */; };
@@ -60,7 +60,7 @@
 /* Begin PBXFileReference section */
 		74089A891E53D6A2000B24F6 /* LLSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSectionModel.swift; sourceTree = "<group>"; };
 		74089A8B1E53D6B1000B24F6 /* LLSQLWordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordModel.swift; sourceTree = "<group>"; };
-		74089A8F1E53DD19000B24F6 /* LLSQLWordsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordsController.swift; sourceTree = "<group>"; };
+		74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordsControllerModel.swift; sourceTree = "<group>"; };
 		7429596A1E4A7853008BBAD5 /* LLCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCardViewController.swift; sourceTree = "<group>"; };
 		742B06761E5ABD5500C1802A /* LHSQLBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLBaseManager.swift; sourceTree = "<group>"; };
 		742B06771E5ABD5500C1802A /* LHSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLManager.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		74089A8D1E53D9B9000B24F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				74089A8F1E53DD19000B24F6 /* LLSQLWordsController.swift */,
+				74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */,
 				742B06971E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift */,
 			);
 			path = Controller;
@@ -490,7 +490,7 @@
 				74BCA41E1E527B9B00FF426A /* LHIndexModel.swift in Sources */,
 				74BCA41F1E527B9B00FF426A /* LHIndexSenseModel.swift in Sources */,
 				74BCA4201E527B9B00FF426A /* LHPrinstonDictionaryModel.swift in Sources */,
-				74089A901E53DD19000B24F6 /* LLSQLWordsController.swift in Sources */,
+				74089A901E53DD19000B24F6 /* LLSQLWordsControllerModel.swift in Sources */,
 				74BCA4521E52A55500FF426A /* LLDefenitionViewController.swift in Sources */,
 				74BCA4581E53905E00FF426A /* LLBaseModel.swift in Sources */,
 				742B068F1E5ABD5500C1802A /* LHSQLStudyingModel.swift in Sources */,
@@ -576,7 +576,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -625,7 +625,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -638,6 +638,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 689FW3K8A2;
 				INFOPLIST_FILE = LangugaLearnerForIOs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dzmitry.Kudrashou.LangugaLearnerForIOs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,6 +654,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 689FW3K8A2;
 				INFOPLIST_FILE = LangugaLearnerForIOs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dzmitry.Kudrashou.LangugaLearnerForIOs;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,16 +8,17 @@
 
 import UIKit
 
-class LLSQLWordsController : LLWordsControllerProtocol {
+class LLSQLWordsControllerModel: LLTableControllerProtocol {
 
 	private let countOfWords = 5
 	private var modelsArray = [LLWordModelProtocol]()
 	
-	var filterWord:String = ""
+	var filterWord = ""
 	
-	var sqlWordsManager:LHSQLWordsAndStudyProtocol!
+	var sqlWordsManager: LHSQLWordsAndStudyProtocol!
 	
-	func load() {
+    @MainActor
+    func load() {
 		self.sqlWordsManager = LHSQLWordsAndStudyManager(UserInfo.instance.wordsFilePath)
 		self.sqlWordsManager.attachDatabase(UserInfo.instance.studyFilePath, databaseName:"study")
 		

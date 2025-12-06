@@ -14,7 +14,7 @@ internal class LHDataModel : LHBasePrinstonModel {
 	private(set) var information:String = ""
 	
 	override func parseLine(line:String) {
-		var lines = line.components(separatedBy:"|")
+		let lines = line.components(separatedBy:"|")
 		assert(lines.count == 2)
 		self.text = lines[1]
 		var array = lines[0].components(separatedBy:" ")

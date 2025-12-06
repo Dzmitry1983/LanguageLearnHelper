@@ -11,7 +11,7 @@ import Foundation
 class UserInfo {
 	
 	//properties
-	static let instance:UserInfo = UserInfo()
+    @MainActor static let instance: UserInfo = UserInfo()
 	var wordsModel = LHWordsModel()
 	private var wordsForStudy = [LHWordModel]()
 	private var historyOfWords = [LHWordModel]()
@@ -28,9 +28,9 @@ class UserInfo {
 		return ""
 	}
 
-	private (set) var studyFilePath:String = ""
+	private(set) var studyFilePath:String = ""
 	
-	private (set) var count:Int = 0
+	private(set) var count:Int = 0
 	
 	
 	init() {

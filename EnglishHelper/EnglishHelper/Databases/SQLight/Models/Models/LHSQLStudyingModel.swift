@@ -31,10 +31,10 @@ class LHSQLStudyingModel: BaseSQLModel, SQLModelProtocol {
 	
 	
 	
-	static var table:String = "Studying"
+	static let table: String = "Studying"
 	
-	static var sqlCreateTable:String = "`id` INTEGER PRIMARY KEY AUTOINCREMENT, `wordId` INTEGER,`word` TEXT NOT NULL, `speech` INTEGER NOT NULL, `studyType` INTEGER, `defToEnCount` INTEGER, `enToDefCount` INTEGER, `studyGroup` TEXT"
-	static var sqlFields:[String] = ["id", "wordId", "word", "speech", "studyType", "defToEnCount", "enToDefCount", "studyGroup"]
+	static let sqlCreateTable:String = "`id` INTEGER PRIMARY KEY AUTOINCREMENT, `wordId` INTEGER,`word` TEXT NOT NULL, `speech` INTEGER NOT NULL, `studyType` INTEGER, `defToEnCount` INTEGER, `enToDefCount` INTEGER, `studyGroup` TEXT"
+	static let sqlFields:[String] = ["id", "wordId", "word", "speech", "studyType", "defToEnCount", "enToDefCount", "studyGroup"]
 	
 	subscript(index: String) -> Any {
 		let returnValue:Any

@@ -70,7 +70,8 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 		}
 	}
 	
-	func load() {
+    @MainActor
+    func load() {
 		self.sqlWordsManager = LHSQLWordsAndStudyManager(UserInfo.instance.wordsFilePath)
 		self.sqlWordsManager.attachDatabase(UserInfo.instance.studyFilePath, databaseName:"study")
 		self.update()

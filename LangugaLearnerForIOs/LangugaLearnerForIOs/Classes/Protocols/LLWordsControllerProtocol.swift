@@ -30,15 +30,8 @@ protocol LLSectionModelProtocol {
 	var count:Int {get}
 }
 
+@MainActor
 protocol LLTableControllerProtocol {
 	func load()
 	func close()
-}
-
-protocol LLWordsControllerProtocol : LLTableControllerProtocol {
-	func next() -> LLWordModelProtocol?
-	func last() -> LLWordModelProtocol?
-	func saveModel(_ model:LLWordModelProtocol)
-	var filterWord:String {get set}
-	
 }
