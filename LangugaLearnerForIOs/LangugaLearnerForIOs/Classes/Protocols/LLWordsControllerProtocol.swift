@@ -12,17 +12,22 @@ enum StudyWodrsType : Int {
 	case all = 0
 	case studying
 	case studied
-}
-
-protocol LLWordModelProtocol {
-	var word:String {get}
-	var speech:String {get}
-	var transcription:String {get}
-	var definitions:[String] {get}
-	var studyingGroup:String {get}
-	var studyingType:Int {get set}
-	var enToDefCount:Int {get set}
-	var defToEnCount:Int {get set}
+    
+    var next: StudyWodrsType {
+        switch self {
+        case .all: return .studying
+        case .studying: return .studied
+        case .studied: return .all
+        }
+    }
+    
+    var localizedTitle: String {
+        switch self {
+        case .all: return NSLocalizedString("All", comment: "")
+        case .studying: return NSLocalizedString("Studying", comment: "")
+        case .studied: return NSLocalizedString("Studied", comment: "")
+        }
+    }
 }
 
 protocol LLSectionModelProtocol {

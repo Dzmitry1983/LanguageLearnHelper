@@ -10,6 +10,7 @@
 		74089A8A1E53D6A2000B24F6 /* LLSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A891E53D6A2000B24F6 /* LLSectionModel.swift */; };
 		74089A8C1E53D6B1000B24F6 /* LLSQLWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8B1E53D6B1000B24F6 /* LLSQLWordModel.swift */; };
 		74089A901E53DD19000B24F6 /* LLSQLWordsControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */; };
+		741869B52EE45C8900C0C508 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741869B42EE45C8900C0C508 /* MainTabBarController.swift */; };
 		7429596B1E4A7853008BBAD5 /* LLCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429596A1E4A7853008BBAD5 /* LLCardViewController.swift */; };
 		742B06881E5ABD5500C1802A /* LHSQLBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06761E5ABD5500C1802A /* LHSQLBaseManager.swift */; };
 		742B06891E5ABD5500C1802A /* LHSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06771E5ABD5500C1802A /* LHSQLManager.swift */; };
@@ -55,12 +56,14 @@
 		74BCA4651E539C3F00FF426A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BCA45F1E539C3F00FF426A /* LaunchScreen.storyboard */; };
 		74BCA4661E539C3F00FF426A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BCA4601E539C3F00FF426A /* Main.storyboard */; };
 		74BCA46B1E539F8800FF426A /* LLWordsControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BCA46A1E539F8800FF426A /* LLWordsControllerProtocol.swift */; };
+		74DD928C2EE45B2700CCE166 /* LLWordsTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DD928B2EE45B2700CCE166 /* LLWordsTableViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74089A891E53D6A2000B24F6 /* LLSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSectionModel.swift; sourceTree = "<group>"; };
 		74089A8B1E53D6B1000B24F6 /* LLSQLWordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordModel.swift; sourceTree = "<group>"; };
 		74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordsControllerModel.swift; sourceTree = "<group>"; };
+		741869B42EE45C8900C0C508 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		7429596A1E4A7853008BBAD5 /* LLCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCardViewController.swift; sourceTree = "<group>"; };
 		742B06761E5ABD5500C1802A /* LHSQLBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLBaseManager.swift; sourceTree = "<group>"; };
 		742B06771E5ABD5500C1802A /* LHSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLManager.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		74BCA45F1E539C3F00FF426A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74BCA4601E539C3F00FF426A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		74BCA46A1E539F8800FF426A /* LLWordsControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLWordsControllerProtocol.swift; sourceTree = "<group>"; };
+		74DD928B2EE45B2700CCE166 /* LLWordsTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LLWordsTableViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 				74BCA4501E52A55500FF426A /* LLDefenitionViewController.swift */,
 				74BCA4541E53879100FF426A /* LLWordsTableViewController.swift */,
 				742B069C1E5C404C00C1802A /* LLWordStudyTableViewCell.swift */,
+				741869B42EE45C8900C0C508 /* MainTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				74BCA45F1E539C3F00FF426A /* LaunchScreen.storyboard */,
 				74BCA4601E539C3F00FF426A /* Main.storyboard */,
 				746236A92EE4388A00F09100 /* LLDefenitionViewController.storyboard */,
+				74DD928B2EE45B2700CCE166 /* LLWordsTableViewController.storyboard */,
 			);
 			path = "Storyboard-s";
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 			files = (
 				746236AA2EE4388A00F09100 /* LLDefenitionViewController.storyboard in Resources */,
 				74BCA4631E539C3F00FF426A /* new.json in Resources */,
+				74DD928C2EE45B2700CCE166 /* LLWordsTableViewController.storyboard in Resources */,
 				74359A161E591E0900960AC1 /* words.sqlite in Resources */,
 				74359A151E591E0900960AC1 /* studying.sqlite in Resources */,
 				74BCA4661E539C3F00FF426A /* Main.storyboard in Resources */,
@@ -509,6 +516,7 @@
 				74BCA4551E53879100FF426A /* LLWordsTableViewController.swift in Sources */,
 				742B06981E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift in Sources */,
 				742B06941E5ABD5500C1802A /* LHSQLTable.swift in Sources */,
+				741869B52EE45C8900C0C508 /* MainTabBarController.swift in Sources */,
 				742B068C1E5ABD5500C1802A /* LHSQLWordsManager.swift in Sources */,
 				74BCA41C1E527B9B00FF426A /* LHBasePrinstonModel.swift in Sources */,
 				742B06891E5ABD5500C1802A /* LHSQLManager.swift in Sources */,
@@ -636,10 +644,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 689FW3K8A2;
 				INFOPLIST_FILE = LangugaLearnerForIOs/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Dzmitry.Kudrashou.LangugaLearnerForIOs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -652,10 +663,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 689FW3K8A2;
 				INFOPLIST_FILE = LangugaLearnerForIOs/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Dzmitry.Kudrashou.LangugaLearnerForIOs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

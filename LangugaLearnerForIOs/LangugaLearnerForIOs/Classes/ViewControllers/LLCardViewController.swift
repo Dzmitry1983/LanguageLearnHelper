@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LLCardViewController: UIViewController {
+class LLCardViewController: UIViewController, UITextFieldDelegate {
 
 	private let duration:TimeInterval = 0.4
 	
@@ -31,7 +31,7 @@ class LLCardViewController: UIViewController {
 	@IBOutlet weak var studyStatusSegmentController: UISegmentedControl!
 	
 	private var pageNumber:Int = 0
-	private var wordModel:LLWordModelProtocol? = nil
+	private var wordModel:LLSQLWordModel? = nil
 	private var modelsArray = LLSQLWordsControllerModel()
 	var isIncrementedDef:Bool = false
 	var isIncrementedEn:Bool = false

@@ -1,116 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SrA-QP-bDk">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SrA-QP-bDk">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--All words-->
-        <scene sceneID="ObL-hV-B5d">
-            <objects>
-                <tableViewController id="niY-R0-LJm" customClass="LLWordsTableViewController" customModule="LangugaLearnerForIOs" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="SKF-nk-3Tl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="LSn-ay-9Xw">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="niY-R0-LJm" id="zg2-wM-bQm"/>
-                            </connections>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordStudyModel" rowHeight="65" id="t8q-6r-bXV" customClass="LLWordStudyTableViewCell" customModule="LangugaLearnerForIOs" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="375" height="65"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t8q-6r-bXV" id="UeV-Ax-GTl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUu-CK-bM9">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25e-1R-ba8">
-                                            <rect key="frame" x="8" y="21" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-kX-gBD">
-                                            <rect key="frame" x="8" y="42" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="speechLabel" destination="25e-1R-ba8" id="yYG-Bb-aV1"/>
-                                    <outlet property="transcriptionLabel" destination="Pdr-kX-gBD" id="tZL-00-ZLk"/>
-                                    <outlet property="wordLabel" destination="BUu-CK-bM9" id="b0c-8F-WT6"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="niY-R0-LJm" id="1Zn-ga-F5T"/>
-                            <outlet property="delegate" destination="niY-R0-LJm" id="vme-Ee-HPh"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="All words" id="t96-vW-o3k"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="studyingType">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="cTe-6d-UCW" id="JEt-Ob-pth"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dsh-Va-6Fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="cTe-6d-UCW">
-                    <connections>
-                        <outlet property="delegate" destination="niY-R0-LJm" id="6VO-eq-IXh"/>
-                        <outlet property="searchBar" destination="LSn-ay-9Xw" id="AHj-hw-5ZK"/>
-                        <outlet property="searchContentsController" destination="niY-R0-LJm" id="V4j-bC-Xua"/>
-                        <outlet property="searchResultsDataSource" destination="niY-R0-LJm" id="Pse-Q0-m7B"/>
-                        <outlet property="searchResultsDelegate" destination="niY-R0-LJm" id="znp-1G-Qml"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="-1327.2" y="1199.5502248875564"/>
-        </scene>
-        <!--All Words-->
-        <scene sceneID="RNb-5f-UTn">
-            <objects>
-                <navigationController id="id4-Pg-zLi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Words" id="ssE-7l-SOi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ZR-eW-A9A">
-                        <rect key="frame" x="0.0" y="20" width="375" height="54"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="niY-R0-LJm" kind="relationship" relationship="rootViewController" id="YSg-rm-sMa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Mt-3i-rgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1326" y="431"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="r3r-Pm-P4Q">
             <objects>
-                <tabBarController id="SrA-QP-bDk" sceneMemberID="viewController">
+                <tabBarController id="SrA-QP-bDk" customClass="MainTabBarController" customModule="LangugaLearnerForIOs" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="hHs-y4-DGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,10 +20,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="5VZ-Af-hIa" kind="relationship" relationship="viewControllers" id="69j-ko-XDW"/>
-                        <segue destination="id4-Pg-zLi" kind="relationship" relationship="viewControllers" id="IOA-aH-842"/>
-                        <segue destination="hXR-64-gsM" kind="relationship" relationship="viewControllers" id="YJe-AF-mLs"/>
-                        <segue destination="EM8-rt-gUl" kind="relationship" relationship="viewControllers" id="fgi-Xw-f7u"/>
-                        <segue destination="oy3-ml-vfA" kind="relationship" relationship="viewControllers" id="HKm-RN-l0G"/>
+                        <segue destination="csV-J1-wns" kind="relationship" relationship="viewControllers" id="dTh-aM-oRR"/>
+                        <segue destination="TFa-xw-0fQ" kind="relationship" relationship="viewControllers" id="ls1-AD-f9n"/>
+                        <segue destination="WcB-pY-IiB" kind="relationship" relationship="viewControllers" id="g5F-qj-NqU"/>
+                        <segue destination="oy3-ml-vfA" kind="relationship" relationship="viewControllers" id="gHr-gd-r5P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEc-hg-4mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,10 +34,6 @@
         <scene sceneID="CTe-bi-7vY">
             <objects>
                 <viewController id="5VZ-Af-hIa" customClass="LLCardViewController" customModule="LangugaLearnerForIOs" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PSb-pk-7gi"/>
-                        <viewControllerLayoutGuide type="bottom" id="1lj-UW-4SK"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-sj-X6u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
@@ -213,7 +111,6 @@
                                                 </connections>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="QCQ-nL-Irq" firstAttribute="leading" secondItem="hZR-W6-Lij" secondAttribute="trailing" constant="8" id="32n-J1-uz1"/>
                                             <constraint firstItem="0Zy-AB-mHC" firstAttribute="width" secondItem="QCQ-nL-Irq" secondAttribute="width" id="4a1-Zn-COy"/>
@@ -282,7 +179,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="RIP-Js-bGj" firstAttribute="leading" secondItem="lxN-KG-bPN" secondAttribute="leading" id="0kV-Gk-NwP"/>
                                                     <constraint firstAttribute="trailing" secondItem="VlH-6H-KKR" secondAttribute="trailing" id="1Kf-IP-jxL"/>
@@ -303,13 +199,12 @@
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiN-es-ypL">
                                                         <rect key="frame" x="8" y="8" width="327" height="443"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="iiN-es-ypL" firstAttribute="top" secondItem="WVT-Lg-sTk" secondAttribute="top" constant="8" id="A5l-yB-0m4"/>
                                                     <constraint firstItem="iiN-es-ypL" firstAttribute="leading" secondItem="WVT-Lg-sTk" secondAttribute="leading" constant="8" id="Fnh-iW-ebd"/>
@@ -318,7 +213,6 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="WVT-Lg-sTk" secondAttribute="trailing" id="3jc-LY-FBa"/>
                                             <constraint firstItem="lxN-KG-bPN" firstAttribute="leading" secondItem="gH4-CD-FSY" secondAttribute="leading" id="4qK-Mf-cAy"/>
@@ -343,12 +237,12 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="PYS-4W-whR"/>
                         <constraints>
                             <constraint firstItem="TqU-X6-gbK" firstAttribute="leading" secondItem="FeN-sj-X6u" secondAttribute="leadingMargin" id="A0a-Gq-e3r"/>
-                            <constraint firstItem="TqU-X6-gbK" firstAttribute="top" secondItem="PSb-pk-7gi" secondAttribute="bottom" id="Q4l-a6-W8s"/>
+                            <constraint firstItem="TqU-X6-gbK" firstAttribute="top" secondItem="PYS-4W-whR" secondAttribute="top" id="Q4l-a6-W8s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TqU-X6-gbK" secondAttribute="trailing" id="WpN-Oq-ICW"/>
-                            <constraint firstItem="1lj-UW-4SK" firstAttribute="top" secondItem="TqU-X6-gbK" secondAttribute="bottom" id="YtG-YG-OLY"/>
+                            <constraint firstItem="PYS-4W-whR" firstAttribute="bottom" secondItem="TqU-X6-gbK" secondAttribute="bottom" id="YtG-YG-OLY"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xg9-Ng-iX7" appends="YES" id="VIB-0k-4Av"/>
@@ -392,18 +286,44 @@
             </objects>
             <point key="canvasLocation" x="-1927.2" y="-382.75862068965517"/>
         </scene>
+        <!--LLWordsTableViewController-->
+        <scene sceneID="NN4-Qo-3c7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LLWordsTableViewController" id="csV-J1-wns" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Rme-fd-r6j"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4r8-id-huf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="-119"/>
+        </scene>
+        <!--LLWordsTableViewController-->
+        <scene sceneID="PaD-3B-qUM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LLWordsTableViewController" id="TFa-xw-0fQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3Jg-Iy-a0b"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZD9-Ao-S7Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075" y="-2"/>
+        </scene>
+        <!--LLWordsTableViewController-->
+        <scene sceneID="bnq-Wf-Ou6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LLWordsTableViewController" id="WcB-pY-IiB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aRr-6k-eyU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lic-3E-IUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="-5"/>
+        </scene>
         <!--Prefiences-->
         <scene sceneID="45r-M8-iq7">
             <objects>
                 <viewController id="oy3-ml-vfA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8wh-p6-rbM"/>
-                        <viewControllerLayoutGuide type="bottom" id="6hR-qi-1ZQ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dbo-ki-pfk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="p8s-9O-TMH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Prefiences" id="EOA-wa-RLh"/>
                 </viewController>
@@ -411,206 +331,11 @@
             </objects>
             <point key="canvasLocation" x="810" y="-475"/>
         </scene>
-        <!--Studying Words-->
-        <scene sceneID="buT-or-9tu">
-            <objects>
-                <tableViewController id="IPj-Cj-cwH" customClass="LLWordsTableViewController" customModule="LangugaLearnerForIOs" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="lpx-fr-oLu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="DLm-kk-Qh1">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="IPj-Cj-cwH" id="Yk5-mC-X42"/>
-                            </connections>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordStudyModel" rowHeight="64" id="QuO-4E-hPK" customClass="LLWordStudyTableViewCell" customModule="LangugaLearnerForIOs" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="375" height="64"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QuO-4E-hPK" id="GuK-pI-FRN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-hV-23M">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qe-Zy-bfG">
-                                            <rect key="frame" x="8" y="21" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJO-GQ-NTN">
-                                            <rect key="frame" x="8" y="42" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="speechLabel" destination="0qe-Zy-bfG" id="plf-U4-lgg"/>
-                                    <outlet property="transcriptionLabel" destination="pJO-GQ-NTN" id="fmk-KU-vMj"/>
-                                    <outlet property="wordLabel" destination="EgU-hV-23M" id="HMc-uP-vxr"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="IPj-Cj-cwH" id="ppN-XZ-812"/>
-                            <outlet property="delegate" destination="IPj-Cj-cwH" id="rRF-qA-jiP"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Studying Words" id="fTV-nI-zcz"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="studyingType">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="cTe-6d-UCW" id="RbR-f9-vRU"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgo-Fe-IPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="rrG-QE-Yfb">
-                    <connections>
-                        <outlet property="delegate" destination="IPj-Cj-cwH" id="HkS-VR-PwI"/>
-                        <outlet property="searchBar" destination="DLm-kk-Qh1" id="tke-ve-Yey"/>
-                        <outlet property="searchContentsController" destination="IPj-Cj-cwH" id="RAT-fi-jwC"/>
-                        <outlet property="searchResultsDataSource" destination="IPj-Cj-cwH" id="lvZ-pH-fax"/>
-                        <outlet property="searchResultsDelegate" destination="IPj-Cj-cwH" id="Ld2-UX-MVf"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="-566" y="1200"/>
-        </scene>
-        <!--Studying Words-->
-        <scene sceneID="v6w-Os-pBq">
-            <objects>
-                <navigationController id="hXR-64-gsM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Studying Words" id="Ao8-5K-ZSk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5AP-Sg-xlf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="54"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="IPj-Cj-cwH" kind="relationship" relationship="rootViewController" id="1gb-OL-Rw3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A4E-j4-QjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-566" y="431"/>
-        </scene>
-        <!--Studied Words-->
-        <scene sceneID="d6d-Oa-dvu">
-            <objects>
-                <tableViewController id="eRO-tW-95R" customClass="LLWordsTableViewController" customModule="LangugaLearnerForIOs" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="NEq-Fo-3QN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="1Io-Ta-xP2">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="eRO-tW-95R" id="ZZ6-gq-LrW"/>
-                            </connections>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordStudyModel" rowHeight="64" id="3ME-JP-vK4" customClass="LLWordStudyTableViewCell" customModule="LangugaLearnerForIOs" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="375" height="64"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ME-JP-vK4" id="Z4D-pA-viP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-WA-JT9">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-eR-XOC">
-                                            <rect key="frame" x="8" y="21" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSb-jY-d70">
-                                            <rect key="frame" x="8" y="42" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="speechLabel" destination="uvi-eR-XOC" id="XKI-Kx-spE"/>
-                                    <outlet property="transcriptionLabel" destination="mSb-jY-d70" id="7io-Mo-MAG"/>
-                                    <outlet property="wordLabel" destination="Pqq-WA-JT9" id="g7n-ez-2dg"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eRO-tW-95R" id="5wd-ET-gau"/>
-                            <outlet property="delegate" destination="eRO-tW-95R" id="94z-f4-4gB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Studied Words" id="0xI-64-iyM"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="studyingType">
-                            <integer key="value" value="2"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="cTe-6d-UCW" id="duh-pg-dmg"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lyF-qg-Y2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="R8c-Yo-NgK">
-                    <connections>
-                        <outlet property="delegate" destination="eRO-tW-95R" id="QeH-DB-nuT"/>
-                        <outlet property="searchBar" destination="1Io-Ta-xP2" id="z9e-rg-pQb"/>
-                        <outlet property="searchContentsController" destination="eRO-tW-95R" id="br6-p5-mM4"/>
-                        <outlet property="searchResultsDataSource" destination="eRO-tW-95R" id="Ycw-gk-ZER"/>
-                        <outlet property="searchResultsDelegate" destination="eRO-tW-95R" id="qAl-tU-6ky"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="210" y="1200"/>
-        </scene>
-        <!--Studied Words-->
-        <scene sceneID="oqb-9w-Mkl">
-            <objects>
-                <navigationController id="EM8-rt-gUl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Studied Words" id="KWE-Ho-Pc0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l9R-qU-dSR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="54"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="eRO-tW-95R" kind="relationship" relationship="rootViewController" id="ULr-bg-4b1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vcs-9g-bEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="210" y="430"/>
-        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

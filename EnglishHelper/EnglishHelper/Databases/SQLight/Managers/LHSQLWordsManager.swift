@@ -172,7 +172,8 @@ class LHSQLWordsManager : LHSQLBaseManager, LHSQLManagerProtocol {
 		
 		if filter != nil {
 			let filterValue = filter! + "%"
-			if SQLITE_OK != sqlite3_bind_text(statement, 1, filterValue, -1) { (pointer) in} {
+            let bindTextResult = sqlite3_bind_text(statement, 1, filterValue, -1) { (pointer) in}
+			if SQLITE_OK != bindTextResult {
 				self.printError(dataBase)
 			}
 		}

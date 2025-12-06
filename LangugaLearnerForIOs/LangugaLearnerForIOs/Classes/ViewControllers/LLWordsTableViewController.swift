@@ -271,11 +271,13 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
 	// called when keyboard search button pressed
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 		print("searchBarSearchButtonClicked")
+        searchBar.resignFirstResponder()
 	}
 	
 	// called when bookmark button pressed
 	func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
 		print("searchBarBookmarkButtonClicked")
+        searchBar.resignFirstResponder()
 	}
 	
 	// called when cancel button pressed
@@ -285,11 +287,13 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
 			self.modelsArray.filterWord = ""
 			self.tableView.reloadData()
 		}
+        searchBar.resignFirstResponder()
 	}
 	
 	// called when search results button pressed
 	func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
 		print("searchBarResultsListButtonClicked")
+        searchBar.resignFirstResponder()
 	}
 	
 	

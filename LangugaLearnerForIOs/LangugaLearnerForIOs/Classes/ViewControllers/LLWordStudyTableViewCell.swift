@@ -14,7 +14,7 @@ class LLWordStudyTableViewCell: UITableViewCell {
 	@IBOutlet weak var speechLabel: UILabel!
 	@IBOutlet weak var transcriptionLabel: UILabel!
 	
-	private var wordModel:LLWordModelProtocol! = nil
+	private var wordModel:LLSQLWordModel! = nil
 	
 	var table:UITableView? = nil
 	
@@ -29,7 +29,7 @@ class LLWordStudyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 	
-	func updateFrom(_ model:LLWordModelProtocol) {
+	func updateFrom(_ model:LLSQLWordModel) {
 		self.wordModel = model
 		self.update()
 	}

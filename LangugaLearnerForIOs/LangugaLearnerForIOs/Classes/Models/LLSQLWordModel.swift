@@ -8,6 +8,17 @@
 
 import UIKit
 
+protocol LLWordModelProtocol {
+    var word:String {get}
+    var speech:String {get}
+    var transcription:String {get}
+    var definitions:[String] {get}
+    var studyingGroup:String {get}
+    var studyingType:Int {get set}
+    var enToDefCount:Int {get set}
+    var defToEnCount:Int {get set}
+}
+
 class LLSQLWordModel: LLBaseModel, LLWordModelProtocol {
 	var word:String {
 			return self.sqlWordModel.word

@@ -36,7 +36,7 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 		}
 	}
 	
-	subscript(first: Int, seccond:Int) -> LLWordModelProtocol {
+	subscript(first: Int, seccond:Int) -> LLSQLWordModel {
 		get {
 			var offset = 0
 			for number in 0..<first {
@@ -59,7 +59,7 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 				self.updateWordsAfter()
 				
 			}
-			let returnValue: LLWordModelProtocol
+			let returnValue: LLSQLWordModel
 			if self.wordsCurrent.count > number && number >= 0 {
 				returnValue = self.wordsCurrent[number]
 			}
@@ -94,7 +94,7 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 		self.updateWordsAfter()
 	}
 	
-	func updateModel(_ model:LLWordModelProtocol) {
+	func updateModel(_ model:LLSQLWordModel) {
 		if let sqlModel = model as? LLSQLWordModel {
 			self.sqlWordsManager.wordModelFull(model: sqlModel.sqlWordModel)
 		}
@@ -152,9 +152,7 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 		return returnValue
 	}
 	
-	func saveModel(_ model:LLWordModelProtocol) {
-		if let sqlModel = model as? LLSQLWordModel {
-			self.sqlWordsManager.save(sqlModel.sqlStudyingModel)
-		}
+	func saveModel(_ model:LLSQLWordModel) {
+        self.sqlWordsManager.save(model.sqlStudyingModel)
 	}
 }

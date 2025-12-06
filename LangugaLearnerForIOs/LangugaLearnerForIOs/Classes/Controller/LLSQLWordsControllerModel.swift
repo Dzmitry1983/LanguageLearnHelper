@@ -11,7 +11,7 @@ import UIKit
 class LLSQLWordsControllerModel: LLTableControllerProtocol {
 
 	private let countOfWords = 5
-	private var modelsArray = [LLWordModelProtocol]()
+	private var modelsArray = [LLSQLWordModel]()
 	
 	var filterWord = ""
 	
@@ -36,9 +36,9 @@ class LLSQLWordsControllerModel: LLTableControllerProtocol {
 		self.sqlWordsManager = nil
 	}
 	
-	func next() -> LLWordModelProtocol? {
+	func next() -> LLSQLWordModel? {
 		let words = self.sqlWordsManager.wordsRandomModel(count:1, studyType:.studying, self.filterWord)
-		var returnValue:LLWordModelProtocol? = nil
+		var returnValue:LLSQLWordModel? = nil
 		print("count = \(words.count)")
 		if words.count > 0 {
 			let model = LLSQLWordModel(sqlWordModel: words[0].words, sqlStudyingModel: words[0].study)
@@ -55,9 +55,9 @@ class LLSQLWordsControllerModel: LLTableControllerProtocol {
 		return returnValue
 	}
 	
-	func last() -> LLWordModelProtocol? {
+	func last() -> LLSQLWordModel? {
 		let words = self.sqlWordsManager.wordsRandomModel(count:1, studyType:.studying, self.filterWord)
-		var returnValue:LLWordModelProtocol? = nil
+		var returnValue:LLSQLWordModel? = nil
 		print("count = \(words.count)")
 		if words.count > 0 {
 			let model = LLSQLWordModel(sqlWordModel: words[0].words, sqlStudyingModel: words[0].study)
@@ -73,9 +73,7 @@ class LLSQLWordsControllerModel: LLTableControllerProtocol {
 		return returnValue
 	}
 	
-	func saveModel(_ model:LLWordModelProtocol) {
-		if let sqlModel = model as? LLSQLWordModel {
-			self.sqlWordsManager.save(sqlModel.sqlStudyingModel)
-		}
+	func saveModel(_ model:LLSQLWordModel) {
+        self.sqlWordsManager.save(model.sqlStudyingModel)
 	}
 }
