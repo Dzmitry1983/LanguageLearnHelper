@@ -94,10 +94,8 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 		self.updateWordsAfter()
 	}
 	
-	func updateModel(_ model:LLSQLWordModel) {
-		if let sqlModel = model as? LLSQLWordModel {
-			self.sqlWordsManager.wordModelFull(model: sqlModel.sqlWordModel)
-		}
+	func updateModel(_ model: LLSQLWordModel) {
+        self.sqlWordsManager.wordModelFull(model: model.sqlWordModel)
 	}
 	
 	private func updateWordsBefore() {

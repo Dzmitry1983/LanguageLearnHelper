@@ -31,7 +31,7 @@
                                             <action selector="didStudyTypeChange:" destination="Y6W-OH-hqX" eventType="valueChanged" id="V5U-Ur-e0F"/>
                                         </connections>
                                     </segmentedControl>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jw-kD-jJO">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9jw-kD-jJO">
                                         <rect key="frame" x="8" y="57" width="377" height="601"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

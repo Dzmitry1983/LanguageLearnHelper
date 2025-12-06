@@ -119,7 +119,7 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
 			// Delete the row from the data source
-			var model = self.modelsArray[indexPath.section, indexPath.item]
+			let model = self.modelsArray[indexPath.section, indexPath.item]
 			if model.studyingType > 0 {
 				model.studyingType -= 1
 			}

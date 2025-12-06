@@ -15,9 +15,9 @@ import Foundation
 	
 #endif
 
-class LHDoubleDictionarysKey<CustomType:Equatable> : Hashable {
+class LHDoubleDictionarysKey<CustomType: Equatable & Hashable> : Hashable {
 	var firstKey:String
-	var secondKey:CustomType
+	var secondKey: CustomType
 	
 	init(firstKey:String, secondKey:CustomType) {
 		self.firstKey = firstKey
@@ -31,15 +31,14 @@ class LHDoubleDictionarysKey<CustomType:Equatable> : Hashable {
 		
 	}
 	
-	//Hashable
-	var hashValue: Int {
-		get {
-			return "\(self.firstKey) \(self.secondKey)".hashValue
-		}
-	}
-	
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.firstKey)
+        hasher.combine(self.secondKey)
+//        "\(self.firstKey) \(self.secondKey)".hashValue
+    }
+    
 	//Equatable
-	public static func ==(lhs:LHDoubleDictionarysKey, rhs:LHDoubleDictionarysKey) -> Bool {
+	public static func ==(lhs: LHDoubleDictionarysKey, rhs: LHDoubleDictionarysKey) -> Bool {
 		return lhs.firstKey == rhs.firstKey && lhs.secondKey == lhs.secondKey
 	}
 }

@@ -208,7 +208,8 @@ class LHSQLWordsManager : LHSQLBaseManager, LHSQLManagerProtocol {
 		
 		if filter != nil {
 			let filterValue = filter! + "%"
-			if SQLITE_OK != sqlite3_bind_text(statement, 1, filterValue, -1) { (pointer) in} {
+            let result = sqlite3_bind_text(statement, 1, filterValue, -1) { (pointer) in}
+			if SQLITE_OK != result {
 				self.printError(dataBase)
 			}
 		}
@@ -250,7 +251,8 @@ class LHSQLWordsManager : LHSQLBaseManager, LHSQLManagerProtocol {
 		}
 		
 		if !filter.isEmpty {
-			if SQLITE_OK != sqlite3_bind_text(statement, numberOfValue, filterValue, -1) { (pointer) in} {
+            let result = sqlite3_bind_text(statement, numberOfValue, filterValue, -1) { (pointer) in}
+			if SQLITE_OK != result {
 				self.printError(dataBase)
 			}
 			numberOfValue += 1

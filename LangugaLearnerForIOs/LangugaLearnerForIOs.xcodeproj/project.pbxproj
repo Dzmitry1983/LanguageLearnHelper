@@ -11,6 +11,8 @@
 		74089A8C1E53D6B1000B24F6 /* LLSQLWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8B1E53D6B1000B24F6 /* LLSQLWordModel.swift */; };
 		74089A901E53DD19000B24F6 /* LLSQLWordsControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */; };
 		741869B52EE45C8900C0C508 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741869B42EE45C8900C0C508 /* MainTabBarController.swift */; };
+		741869B92EE4E95100C0C508 /* CopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741869B82EE4E94F00C0C508 /* CopyableLabel.swift */; };
+		741869BB2EE4EB0B00C0C508 /* LLCardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741869BA2EE4EB0B00C0C508 /* LLCardViewController.storyboard */; };
 		7429596B1E4A7853008BBAD5 /* LLCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429596A1E4A7853008BBAD5 /* LLCardViewController.swift */; };
 		742B06881E5ABD5500C1802A /* LHSQLBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06761E5ABD5500C1802A /* LHSQLBaseManager.swift */; };
 		742B06891E5ABD5500C1802A /* LHSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06771E5ABD5500C1802A /* LHSQLManager.swift */; };
@@ -64,6 +66,8 @@
 		74089A8B1E53D6B1000B24F6 /* LLSQLWordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordModel.swift; sourceTree = "<group>"; };
 		74089A8F1E53DD19000B24F6 /* LLSQLWordsControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordsControllerModel.swift; sourceTree = "<group>"; };
 		741869B42EE45C8900C0C508 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		741869B82EE4E94F00C0C508 /* CopyableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyableLabel.swift; sourceTree = "<group>"; };
+		741869BA2EE4EB0B00C0C508 /* LLCardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LLCardViewController.storyboard; sourceTree = "<group>"; };
 		7429596A1E4A7853008BBAD5 /* LLCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCardViewController.swift; sourceTree = "<group>"; };
 		742B06761E5ABD5500C1802A /* LHSQLBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLBaseManager.swift; sourceTree = "<group>"; };
 		742B06771E5ABD5500C1802A /* LHSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLManager.swift; sourceTree = "<group>"; };
@@ -143,6 +147,14 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		741869B72EE4E93D00C0C508 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				741869B82EE4E94F00C0C508 /* CopyableLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		742B06751E5ABD5500C1802A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +211,7 @@
 		74431F7D1E49ABAF004066FE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				741869B72EE4E93D00C0C508 /* Views */,
 				74089A8E1E53DCED000B24F6 /* Factories */,
 				74089A8D1E53D9B9000B24F6 /* Controller */,
 				74BCA4591E539B7E00FF426A /* Protocols */,
@@ -394,6 +407,7 @@
 				74BCA4601E539C3F00FF426A /* Main.storyboard */,
 				746236A92EE4388A00F09100 /* LLDefenitionViewController.storyboard */,
 				74DD928B2EE45B2700CCE166 /* LLWordsTableViewController.storyboard */,
+				741869BA2EE4EB0B00C0C508 /* LLCardViewController.storyboard */,
 			);
 			path = "Storyboard-s";
 			sourceTree = "<group>";
@@ -472,6 +486,7 @@
 				74DD928C2EE45B2700CCE166 /* LLWordsTableViewController.storyboard in Resources */,
 				74359A161E591E0900960AC1 /* words.sqlite in Resources */,
 				74359A151E591E0900960AC1 /* studying.sqlite in Resources */,
+				741869BB2EE4EB0B00C0C508 /* LLCardViewController.storyboard in Resources */,
 				74BCA4661E539C3F00FF426A /* Main.storyboard in Resources */,
 				74BCA4651E539C3F00FF426A /* LaunchScreen.storyboard in Resources */,
 				746506901E49A1E100BEEEA0 /* Assets.xcassets in Resources */,
@@ -520,6 +535,7 @@
 				742B068C1E5ABD5500C1802A /* LHSQLWordsManager.swift in Sources */,
 				74BCA41C1E527B9B00FF426A /* LHBasePrinstonModel.swift in Sources */,
 				742B06891E5ABD5500C1802A /* LHSQLManager.swift in Sources */,
+				741869B92EE4E95100C0C508 /* CopyableLabel.swift in Sources */,
 				74089A8A1E53D6A2000B24F6 /* LLSectionModel.swift in Sources */,
 				74BCA41A1E527B9B00FF426A /* LHWordModel.swift in Sources */,
 				74BCA41B1E527B9B00FF426A /* LHWordsModel.swift in Sources */,
@@ -648,7 +664,7 @@
 				DEVELOPMENT_TEAM = 689FW3K8A2;
 				INFOPLIST_FILE = LangugaLearnerForIOs/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Dzmitry.Kudrashou.LangugaLearnerForIOs;
@@ -667,7 +683,7 @@
 				DEVELOPMENT_TEAM = 689FW3K8A2;
 				INFOPLIST_FILE = LangugaLearnerForIOs/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Dzmitry.Kudrashou.LangugaLearnerForIOs;
