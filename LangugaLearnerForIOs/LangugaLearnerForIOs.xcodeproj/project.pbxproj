@@ -26,7 +26,7 @@
 		742B06941E5ABD5500C1802A /* LHSQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06851E5ABD5500C1802A /* LHSQLTable.swift */; };
 		742B06951E5ABD5500C1802A /* LHSQLTableWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06861E5ABD5500C1802A /* LHSQLTableWords.swift */; };
 		742B06961E5ABD5500C1802A /* LHSQLTableWordsAndStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06871E5ABD5500C1802A /* LHSQLTableWordsAndStudy.swift */; };
-		742B06981E5AD69F00C1802A /* LLSQLWordsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06971E5AD69F00C1802A /* LLSQLWordsTableController.swift */; };
+		742B06981E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B06971E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift */; };
 		742B069B1E5C02F500C1802A /* LHSQLProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B069A1E5C02F500C1802A /* LHSQLProtocols.swift */; };
 		742B069E1E5C404C00C1802A /* LLWordStudyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B069C1E5C404C00C1802A /* LLWordStudyTableViewCell.swift */; };
 		74359A151E591E0900960AC1 /* studying.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 74359A131E591E0900960AC1 /* studying.sqlite */; };
@@ -35,6 +35,7 @@
 		74431F8A1E49ABDE004066FE /* LHFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74431F831E49ABDE004066FE /* LHFileLoader.swift */; };
 		74431F8B1E49ABDE004066FE /* LHJsonSerealization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74431F841E49ABDE004066FE /* LHJsonSerealization.swift */; };
 		74431F901E49AD1C004066FE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74431F8F1E49AD1C004066FE /* UserInfo.swift */; };
+		746236AA2EE4388A00F09100 /* LLDefenitionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746236A92EE4388A00F09100 /* LLDefenitionViewController.storyboard */; };
 		746506891E49A1E100BEEEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746506881E49A1E100BEEEA0 /* AppDelegate.swift */; };
 		746506901E49A1E100BEEEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7465068F1E49A1E100BEEEA0 /* Assets.xcassets */; };
 		74BCA4191E527B9B00FF426A /* LHBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BCA40F1E527B9B00FF426A /* LHBaseModel.swift */; };
@@ -53,7 +54,6 @@
 		74BCA4631E539C3F00FF426A /* new.json in Resources */ = {isa = PBXBuildFile; fileRef = 74BCA45B1E539C3F00FF426A /* new.json */; };
 		74BCA4651E539C3F00FF426A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BCA45F1E539C3F00FF426A /* LaunchScreen.storyboard */; };
 		74BCA4661E539C3F00FF426A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BCA4601E539C3F00FF426A /* Main.storyboard */; };
-		74BCA4671E539C3F00FF426A /* LLDefenitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BCA4621E539C3F00FF426A /* LLDefenitionViewController.xib */; };
 		74BCA46B1E539F8800FF426A /* LLWordsControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BCA46A1E539F8800FF426A /* LLWordsControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,7 @@
 		742B06851E5ABD5500C1802A /* LHSQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLTable.swift; sourceTree = "<group>"; };
 		742B06861E5ABD5500C1802A /* LHSQLTableWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLTableWords.swift; sourceTree = "<group>"; };
 		742B06871E5ABD5500C1802A /* LHSQLTableWordsAndStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLTableWordsAndStudy.swift; sourceTree = "<group>"; };
-		742B06971E5AD69F00C1802A /* LLSQLWordsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordsTableController.swift; sourceTree = "<group>"; };
+		742B06971E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSQLWordsTableControllerModel.swift; sourceTree = "<group>"; };
 		742B069A1E5C02F500C1802A /* LHSQLProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHSQLProtocols.swift; sourceTree = "<group>"; };
 		742B069C1E5C404C00C1802A /* LLWordStudyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLWordStudyTableViewCell.swift; sourceTree = "<group>"; };
 		74359A131E591E0900960AC1 /* studying.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = studying.sqlite; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 		74431F831E49ABDE004066FE /* LHFileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHFileLoader.swift; sourceTree = "<group>"; };
 		74431F841E49ABDE004066FE /* LHJsonSerealization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LHJsonSerealization.swift; sourceTree = "<group>"; };
 		74431F8F1E49AD1C004066FE /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		746236A92EE4388A00F09100 /* LLDefenitionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LLDefenitionViewController.storyboard; sourceTree = "<group>"; };
 		746506851E49A1E100BEEEA0 /* LangugaLearnerForIOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LangugaLearnerForIOs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746506881E49A1E100BEEEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7465068F1E49A1E100BEEEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		74BCA45B1E539C3F00FF426A /* new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new.json; sourceTree = "<group>"; };
 		74BCA45F1E539C3F00FF426A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74BCA4601E539C3F00FF426A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		74BCA4621E539C3F00FF426A /* LLDefenitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLDefenitionViewController.xib; sourceTree = "<group>"; };
 		74BCA46A1E539F8800FF426A /* LLWordsControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLWordsControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				74089A8F1E53DD19000B24F6 /* LLSQLWordsController.swift */,
-				742B06971E5AD69F00C1802A /* LLSQLWordsTableController.swift */,
+				742B06971E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -387,6 +387,7 @@
 			children = (
 				74BCA45F1E539C3F00FF426A /* LaunchScreen.storyboard */,
 				74BCA4601E539C3F00FF426A /* Main.storyboard */,
+				746236A92EE4388A00F09100 /* LLDefenitionViewController.storyboard */,
 			);
 			path = "Storyboard-s";
 			sourceTree = "<group>";
@@ -394,7 +395,6 @@
 		74BCA4611E539C3F00FF426A /* Xib-s */ = {
 			isa = PBXGroup;
 			children = (
-				74BCA4621E539C3F00FF426A /* LLDefenitionViewController.xib */,
 			);
 			path = "Xib-s";
 			sourceTree = "<group>";
@@ -442,6 +442,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -460,9 +461,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746236AA2EE4388A00F09100 /* LLDefenitionViewController.storyboard in Resources */,
 				74BCA4631E539C3F00FF426A /* new.json in Resources */,
 				74359A161E591E0900960AC1 /* words.sqlite in Resources */,
-				74BCA4671E539C3F00FF426A /* LLDefenitionViewController.xib in Resources */,
 				74359A151E591E0900960AC1 /* studying.sqlite in Resources */,
 				74BCA4661E539C3F00FF426A /* Main.storyboard in Resources */,
 				74BCA4651E539C3F00FF426A /* LaunchScreen.storyboard in Resources */,
@@ -506,7 +507,7 @@
 				74BCA41D1E527B9B00FF426A /* LHDataModel.swift in Sources */,
 				742B068E1E5ABD5500C1802A /* LHSQLDefinitionModel.swift in Sources */,
 				74BCA4551E53879100FF426A /* LLWordsTableViewController.swift in Sources */,
-				742B06981E5AD69F00C1802A /* LLSQLWordsTableController.swift in Sources */,
+				742B06981E5AD69F00C1802A /* LLSQLWordsTableControllerModel.swift in Sources */,
 				742B06941E5ABD5500C1802A /* LHSQLTable.swift in Sources */,
 				742B068C1E5ABD5500C1802A /* LHSQLWordsManager.swift in Sources */,
 				74BCA41C1E527B9B00FF426A /* LHBasePrinstonModel.swift in Sources */,

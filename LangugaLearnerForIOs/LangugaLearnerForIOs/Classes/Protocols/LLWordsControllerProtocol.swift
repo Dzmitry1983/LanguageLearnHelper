@@ -35,21 +35,6 @@ protocol LLTableControllerProtocol {
 	func close()
 }
 
-protocol LLWordsTableControllerProtocol : LLTableControllerProtocol {
-	var studyType:StudyWodrsType {get set}
-	var count:Int {get}
-	var filterWord:String {get set}
-	var numberPreloadedWords:Int {get set}
-	
-	subscript(index: Int) -> LLSectionModelProtocol { get }
-	subscript(first: Int, seccond:Int) -> LLWordModelProtocol { get }
-
-	
-	func updateModel(_ model:LLWordModelProtocol)
-	func saveModel(_ model:LLWordModelProtocol)
-	func update()
-}
-
 protocol LLWordsControllerProtocol : LLTableControllerProtocol {
 	func next() -> LLWordModelProtocol?
 	func last() -> LLWordModelProtocol?

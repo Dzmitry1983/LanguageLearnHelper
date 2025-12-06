@@ -11,8 +11,8 @@ import UIKit
 class LLDefenitionViewController: UIViewController {
 
 	@IBOutlet weak var textView: UITextView!
-	var wordModel:LLWordModelProtocol?
-	var modelsArray:LLWordsTableControllerProtocol = LLSQLWordsTableController()
+	var wordModel: LLWordModelProtocol?
+	var modelsArray = LLSQLWordsTableControllerModel()
 	
 	@IBOutlet weak var studySegmentController: UISegmentedControl!
 	

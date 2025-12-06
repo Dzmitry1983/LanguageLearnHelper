@@ -1,5 +1,5 @@
 //
-//  LLSQLWordsTableController.swift
+//  LLSQLWordsTableControllerModel.swift
 //  LangugaLearnerForIOs
 //
 //  Created by Dzmitry Kudrashou on 2017-02-20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LLSQLWordsTableController: LLWordsTableControllerProtocol {
+class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 	
 	private var sections = [LLSectionModel]()
 	private var wordsCurrent = [LLSQLWordModel]()
@@ -30,7 +30,7 @@ class LLSQLWordsTableController: LLWordsTableControllerProtocol {
 	var currentOffset:Int = 0
 	var sqlWordsManager:LHSQLWordsAndStudyProtocol!
 	
-	subscript(index: Int) -> LLSectionModelProtocol {
+	subscript(index: Int) -> LLSectionModel {
 		get {
 			return self.sections[index]
 		}
@@ -59,7 +59,7 @@ class LLSQLWordsTableController: LLWordsTableControllerProtocol {
 				self.updateWordsAfter()
 				
 			}
-			let returnValue:LLWordModelProtocol
+			let returnValue: LLWordModelProtocol
 			if self.wordsCurrent.count > number && number >= 0 {
 				returnValue = self.wordsCurrent[number]
 			}

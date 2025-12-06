@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Defenition View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="LLDefenitionViewController" customModule="LangugaLearnerForIOs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qd9-ny-kGm">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5rc-2h-tpO">
+                                        <rect key="frame" x="8" y="8" width="377" height="32"/>
+                                        <segments>
+                                            <segment title="None"/>
+                                            <segment title="Studying"/>
+                                            <segment title="Studied"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="didStudyTypeChange:" destination="Y6W-OH-hqX" eventType="valueChanged" id="V5U-Ur-e0F"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jw-kD-jJO">
+                                        <rect key="frame" x="8" y="57" width="377" height="601"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="aYH-AM-qG0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5rc-2h-tpO" secondAttribute="trailing" constant="8" id="9zw-Mb-lB5"/>
+                                    <constraint firstAttribute="trailing" secondItem="9jw-kD-jJO" secondAttribute="trailing" constant="8" id="LJ3-bt-kcL"/>
+                                    <constraint firstItem="5rc-2h-tpO" firstAttribute="top" secondItem="aYH-AM-qG0" secondAttribute="top" constant="8" id="Q5Y-IS-Tko"/>
+                                    <constraint firstItem="5rc-2h-tpO" firstAttribute="leading" secondItem="Qd9-ny-kGm" secondAttribute="leading" constant="8" id="UlN-Ai-hxD"/>
+                                    <constraint firstItem="9jw-kD-jJO" firstAttribute="top" secondItem="5rc-2h-tpO" secondAttribute="bottom" constant="18" id="bBQ-yt-S99"/>
+                                    <constraint firstAttribute="bottom" secondItem="9jw-kD-jJO" secondAttribute="bottom" constant="8" id="boX-uy-6jk"/>
+                                    <constraint firstItem="9jw-kD-jJO" firstAttribute="leading" secondItem="Qd9-ny-kGm" secondAttribute="leading" constant="8" id="mHM-L2-jZ1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qd9-ny-kGm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Chb-we-ObV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qd9-ny-kGm" secondAttribute="trailing" id="J1L-se-ijL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Qd9-ny-kGm" secondAttribute="bottom" id="kap-bM-xtc"/>
+                            <constraint firstItem="Qd9-ny-kGm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="php-DO-ApL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="studySegmentController" destination="5rc-2h-tpO" id="4zr-ck-R4h"/>
+                        <outlet property="textView" destination="9jw-kD-jJO" id="ZPr-nD-eFY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

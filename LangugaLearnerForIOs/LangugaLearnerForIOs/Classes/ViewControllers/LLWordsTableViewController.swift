@@ -9,7 +9,7 @@
 import UIKit
 
 class LLWordsTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
-	var modelsArray:LLWordsTableControllerProtocol = LLSQLWordsTableController()
+	var modelsArray = LLSQLWordsTableControllerModel()
 	
 	/*
 	enum StudyWodrsType : Int {
@@ -149,10 +149,16 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
 		
 		let model = self.modelsArray[indexPath.section, indexPath.item]
 		self.modelsArray.updateModel(model)
-		
-		let vc = LLDefenitionViewController(nibName:"LLDefenitionViewController", bundle:Bundle.main)
-		vc.wordModel = model
-		self.navigationController?.pushViewController(vc, animated:true)
+        
+        let viewController = UIStoryboard(name: "LLDefenitionViewController", bundle: nil).instantiateInitialViewController()
+        
+        guard let viewController = viewController as? LLDefenitionViewController else {
+            assertionFailure()
+            return
+        }
+        
+        viewController.wordModel = model
+		self.navigationController?.pushViewController(viewController, animated:true)
 		
 	}
 	
