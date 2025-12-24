@@ -15,7 +15,7 @@ class LLSQLWordsControllerModel: LLTableControllerProtocol {
 	
 	var filterWord = ""
 	
-	var sqlWordsManager: LHSQLWordsAndStudyProtocol!
+	var sqlWordsManager: LHSQLWordsAndStudyManager!
 	
     @MainActor
     func load() {

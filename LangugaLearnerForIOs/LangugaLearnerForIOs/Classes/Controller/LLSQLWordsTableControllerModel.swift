@@ -21,14 +21,14 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 			return self.sections.count
 		}
 	}
-	var filterWord:String = "" {
+	var filterWord: String = "" {
 		didSet {
 			self.update()
 		}
 	}
 	var numberPreloadedWords:Int = 100
 	var currentOffset:Int = 0
-	var sqlWordsManager:LHSQLWordsAndStudyProtocol!
+	var sqlWordsManager:LHSQLWordsAndStudyManager!
 	
 	subscript(index: Int) -> LLSectionModel {
 		get {
@@ -36,13 +36,13 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 		}
 	}
 	
-	subscript(first: Int, seccond:Int) -> LLSQLWordModel {
+	subscript(section: Int, item:Int) -> LLSQLWordModel {
 		get {
 			var offset = 0
-			for number in 0..<first {
+			for number in 0..<section {
 				offset += self.sections[number].count
 			}
-			offset += seccond
+			offset += item
 			var number = offset - self.currentOffset
 			if number < 0 {
 				number += self.wordsBefore.count
@@ -83,11 +83,10 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 	
 	func update() {
 		self.sections.removeAll()
-		let study = self.studyTypeFrom(self.studyType)
+        
+		let study = LHSQLStudyingModel.Progress(from: self.studyType)
 		let array = self.sqlWordsManager.firstLetters(studyType:study,  self.filterWord)
-		for letter in array {
-			self.sections.append(LLSectionModel(name:letter.charater, count:letter.count))
-		}
+        self.sections = array.map { LLSectionModel(name: $0.charater, count: $0.count) }
 		self.currentOffset = 0
 		self.updateWordsBefore()
 		self.updateWordsCurrent()
@@ -123,31 +122,26 @@ class LLSQLWordsTableControllerModel: LLTableControllerProtocol {
 	}
 	
 	private func wordsFromSql(startIndex:Int, count:Int) -> [LLSQLWordModel] {
-		var returnValue = [LLSQLWordModel]()
 		assert(count > 0)
 		assert(startIndex >= 0)
 		print("start = \(startIndex), count = \(count)")
-		let study = self.studyTypeFrom(self.studyType)
+		let study = LHSQLStudyingModel.Progress(from: self.studyType)
 		let words = self.sqlWordsManager.wordsModel(number: startIndex, count: count, studyType:study , self.filterWord)
 		print("count = \(words.count)")
-		for word in words.rows {
-			let new = LLSQLWordModel(sqlWordModel: word.words, sqlStudyingModel: word.study)
-			returnValue.append(new)
-		}
-		return returnValue
-	}
-	
-	private func studyTypeFrom(_ studyWodrsType:StudyWodrsType) -> LHSQLStudyingModel.Progress {
-		let returnValue: LHSQLStudyingModel.Progress
-		switch studyWodrsType {
-		case .all:
-			returnValue = .all
-		case .studying:
-			returnValue = .studying
-		case .studied:
-			returnValue = .studied
-		}
-		return returnValue
+        let allWords = words.rows.map { $0.words.word }
+//        allWords.sort(by: <)
+//        let filtered = allWords.filter { $0.first?.lowercased() == "a" }
+        allWords.enumerated().forEach {
+            guard $1.first?.lowercased() == "a" else { return }
+            print("\($0) : \($1)")
+        }
+//        print(filtered)
+//        print(allWords)
+        
+//        words.rows.forEach {
+//            print("words: \($0.words.word)")
+//        }
+        return words.rows.map { LLSQLWordModel(sqlWordModel: $0.words, sqlStudyingModel: $0.study) }
 	}
 	
 	func saveModel(_ model:LLSQLWordModel) {

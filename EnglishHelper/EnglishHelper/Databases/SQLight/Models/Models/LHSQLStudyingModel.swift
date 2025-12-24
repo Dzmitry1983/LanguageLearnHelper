@@ -14,6 +14,14 @@ class LHSQLStudyingModel: BaseSQLModel, SQLModelProtocol {
 		case studying = 1
 		case studied = 2
 		case all
+        
+        init(from studyWodrsType: StudyWodrsType) {
+            switch studyWodrsType {
+            case .all: self = .all
+            case .studying: self = .studying
+            case .studied: self = .studied
+            }
+        }
 	}
 	
 	var id:Int32 = 0

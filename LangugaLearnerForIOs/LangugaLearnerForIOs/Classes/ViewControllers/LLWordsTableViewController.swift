@@ -38,16 +38,13 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		if let study = StudyWodrsType(rawValue: studyingType) {
-			self.modelsArray.studyType = study
-		}
-		self.modelsArray.load()
-		self.countElements = 0
-		for i in 0..<self.modelsArray.count {
-			self.countElements += self.modelsArray[i].count
-		}
-		self.tableView.reloadData()
+        self.updateResult()
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateResult()
+    }
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
@@ -58,6 +55,18 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
+    private func updateResult() {
+        if let study = StudyWodrsType(rawValue: studyingType) {
+            self.modelsArray.studyType = study
+        }
+        self.modelsArray.load()
+        self.countElements = 0
+        for i in 0..<self.modelsArray.count {
+            self.countElements += self.modelsArray[i].count
+        }
+        self.tableView.reloadData()
+    }
 	
 	func configureCollation() {
 		
@@ -92,8 +101,7 @@ class LLWordsTableViewController: UITableViewController, UISearchControllerDeleg
 		
 		let returnValue:UITableViewCell
 		if let myCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LLWordStudyTableViewCell {
-			myCell.updateFrom(model)
-			myCell.table = tableView
+            myCell.updateFrom(model, indexPath: indexPath)
 			returnValue = myCell
 		}
 		else {

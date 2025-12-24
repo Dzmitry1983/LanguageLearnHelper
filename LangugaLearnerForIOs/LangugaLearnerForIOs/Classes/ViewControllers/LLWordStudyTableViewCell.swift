@@ -14,9 +14,9 @@ class LLWordStudyTableViewCell: UITableViewCell {
 	@IBOutlet weak var speechLabel: UILabel!
 	@IBOutlet weak var transcriptionLabel: UILabel!
 	
-	private var wordModel:LLSQLWordModel! = nil
+//	private var wordModel: LLSQLWordModel! = nil
 	
-	var table:UITableView? = nil
+//	var table: UITableView? = nil
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,15 +29,12 @@ class LLWordStudyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 	
-	func updateFrom(_ model:LLSQLWordModel) {
-		self.wordModel = model
-		self.update()
-	}
-	
-	private func update() {
-		self.wordLabel.text = self.wordModel.word
-		self.speechLabel.text = self.wordModel.speech
-		self.transcriptionLabel.text = self.wordModel.transcription
+    func updateFrom(_ wordModel:LLSQLWordModel, indexPath: IndexPath) {
+//		self.wordModel = model
 		
+        self.wordLabel.text = "\(indexPath.row + 1): \(wordModel.word)"
+//        self.wordLabel.text = wordModel.word
+        self.speechLabel.text = wordModel.speech
+        self.transcriptionLabel.text = wordModel.transcription
 	}
 }

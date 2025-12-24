@@ -8,17 +8,6 @@
 
 import Foundation
 
-protocol LHSQLWordsAndStudyProtocol : LHSQLManagerProtocol {
-//	init(mainDB:String, attachedDB:String)
-	func firstLetters(studyType:LHSQLStudyingModel.Progress, _ filter:String) -> [(charater:String, count:Int)]
-	func wordModelFull(model:LHSQLWordModel)
-	func wordsModel(number:Int, count:Int, studyType:LHSQLStudyingModel.Progress, _ filter:String) -> LHSQLTableWordsAndStudy
-	func wordsRandomModel(count:Int, studyType:LHSQLStudyingModel.Progress, _ filter:String) -> LHSQLTableWordsAndStudy
-	
-	func save(_ model:LHSQLStudyingModel)
-	func update<Type:SQLModelProtocol>(_ model:Type)
-}
-
 class LHSQLFilter : CustomStringConvertible {
 	var fieldName:String
 	var value:Any
@@ -36,7 +25,7 @@ class LHSQLFilter : CustomStringConvertible {
 	}
 }
 
-class LHSQLWordsAndStudyManager: LHSQLBaseManager, LHSQLManagerProtocol, LHSQLWordsAndStudyProtocol {
+class LHSQLWordsAndStudyManager: LHSQLBaseManager, LHSQLManagerProtocol {
 	//MARK: - enums
 	private let mainTableName = LHSQLWordModel.table
 	
@@ -424,7 +413,9 @@ class LHSQLWordsAndStudyManager: LHSQLBaseManager, LHSQLManagerProtocol, LHSQLWo
 			numberOfValue += 1
 			command.append(filterModel.description)
 		}
+        command.append(" order by Words.word ASC")
 		command.append(" limit ?, ?")
+        
 		
 		
 		if sqlite3_prepare_v2(dataBase, command, -1, &statement, nil) != SQLITE_OK {
@@ -543,7 +534,9 @@ class LHSQLWordsAndStudyManager: LHSQLBaseManager, LHSQLManagerProtocol, LHSQLWo
 			numberOfValue += 1
 			command.append(filterModel.description)
 		}
-		command.append(" order by random() limit ?")
+		command.append(" order by random()")
+//        command.append(" order by Words.word ASC")
+        command.append(" Limit ?")
 		
 		
 		if sqlite3_prepare_v2(dataBase, command, -1, &statement, nil) != SQLITE_OK {
@@ -613,6 +606,8 @@ class LHSQLWordsAndStudyManager: LHSQLBaseManager, LHSQLManagerProtocol, LHSQLWo
 		if sqlite3_finalize(statement) != SQLITE_OK {
 			self.printError(dataBase)
 		}
+        
+//        returnValue.sort()
 		return returnValue
 	}
 	

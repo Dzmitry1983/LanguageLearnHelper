@@ -23,4 +23,8 @@ class LHSQLTableWordsAndStudy: LHSQLBaseTable, LHSQLTableProtocol {
 	func append(_ newElement:Model) {
 		self.rows.append(newElement)
 	}
+    
+    func sort() {
+        self.rows.sort { $0.words.word < $1.words.word }
+    }
 }
